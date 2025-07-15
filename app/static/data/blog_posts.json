@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Why You Should Learn Flask in 2025",
+    "date": "July 12, 2025",
+    "summary": "Flask remains one of the easiest and most flexible Python web frameworks for beginners and professionals alike. Here’s why it’s still relevant in 2025…",
+    "link": "#",
+    "thumbnail": "blog1.png"
+  },
+  {
+    "title": "Top 5 Tools Every Data Scientist Should Know",
+    "date": "June 20, 2025",
+    "summary": "Data Science continues to evolve quickly — here are the tools I use daily to stay productive and efficient…",
+    "link": "#",
+    "thumbnail": "blog2.png"
+  },
+  {
+    "title": "Responsive Design Tips with TailwindCSS",
+    "date": "May 30, 2025",
+    "summary": "TailwindCSS makes building responsive, modern UIs easy — here’s how I structure my components for maximum flexibility…",
+    "link": "#",
+    "thumbnail": "blog3.png"
+  }
+]

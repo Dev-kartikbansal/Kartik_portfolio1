@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}About Me - Mohit Kumar{% endblock %}
+
+{% block content %}
+<section class="py-12" data-aos="fade-up">
+    <h1 class="text-4xl font-bold text-center mb-6">About Me</h1>
+    <div class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+        <p>
+            Hello! I’m <strong>Mohit Kumar</strong>, a passionate developer and data enthusiast with hands-on experience in building responsive, interactive web applications and working on data-driven projects.
+        </p>
+        <p class="mt-4">
+            I enjoy solving problems, learning new technologies, and contributing to meaningful projects. My skillset includes languages like <strong>C++, Java, Python</strong> and frameworks like <strong>HTML, CSS, JavaScript</strong>.
+        </p>
+
+        <div class="mt-6">
+            <a href="{{ url_for('static', filename='cv/mohit_kumar_cv.pdf') }}" download class="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                📄 Download My CV
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 mt-8 bg-gray-100 dark:bg-gray-800" data-aos="fade-up" data-aos-delay="100">
+    <h2 class="text-3xl font-bold text-center mb-6">Education</h2>
+    <div class="max-w-4xl mx-auto space-y-4">
+        <div class="bg-white dark:bg-gray-700 shadow rounded p-4">
+            <h3 class="font-bold">Bachelor of Technology - Computer Science & Engineering</h3>
+            <p>Lovely Professional University, Punjab, India | CGPA: 7.98 | Since August 2022</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 shadow rounded p-4">
+            <h3 class="font-bold">Intermediate</h3>
+            <p>College of Commerce Arts and Science, Patna, Bihar | Percentage: 72% | Apr 2019 - Mar 2021</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 shadow rounded p-4">
+            <h3 class="font-bold">Matriculation</h3>
+            <p>Annie Beasant International School, Patna, Bihar | Percentage: 85.6% | Apr 2016 - Mar 2019</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 mt-8" data-aos="fade-up" data-aos-delay="200">
+    <h2 class="text-3xl font-bold text-center mb-6">Achievements</h2>
+    <div class="flex flex-wrap justify-center gap-4 text-center">
+        <span class="px-4 py-2 bg-white dark:bg-gray-700 shadow rounded">⭐ 4-star rating in SQL (HackerRank)</span>
+        <span class="px-4 py-2 bg-white dark:bg-gray-700 shadow rounded">🏅 Solved 250+ LeetCode questions & earned badges</span>
+    </div>
+</section>
+{% endblock %}

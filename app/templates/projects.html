@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects - Mohit Kumar{% endblock %}
+
+{% block content %}
+<section class="py-12" data-aos="fade-up">
+    <h1 class="text-4xl font-bold text-center mb-6">My Projects</h1>
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-12">
+        Here are some of the projects I’ve worked on recently.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="bg-white dark:bg-gray-700 shadow rounded flex flex-col" data-aos="fade-up" data-aos-delay="100">
+            <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project 1" class="rounded-t">
+            <div class="p-4 flex flex-col justify-between flex-1">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Data Science Job Salaries Dashboard</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Interactive dashboard exploring global data science salaries using Tableau & Mapbox.
+                    </p>
+                    <p class="text-sm mt-2">Tech stack: Tableau, Kaggle, Mapbox</p>
+                </div>
+                <a href="#" class="mt-4 inline-block text-blue-600 dark:text-blue-400 hover:underline">View Dashboard</a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white dark:bg-gray-700 shadow rounded flex flex-col" data-aos="fade-up" data-aos-delay="200">
+            <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Project 2" class="rounded-t">
+            <div class="p-4 flex flex-col justify-between flex-1">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">NASA Landing Page</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        A NASA-themed landing page with login & contact forms, built using HTML, CSS & JS.
+                    </p>
+                    <p class="text-sm mt-2">Tech stack: HTML, CSS, JavaScript</p>
+                </div>
+                <a href="#" class="mt-4 inline-block text-blue-600 dark:text-blue-400 hover:underline">View GitHub</a>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white dark:bg-gray-700 shadow rounded flex flex-col" data-aos="fade-up" data-aos-delay="300">
+            <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="Project 3" class="rounded-t">
+            <div class="p-4 flex flex-col justify-between flex-1">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Restaurant Website</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        A responsive restaurant website showcasing menus and user-friendly navigation.
+                    </p>
+                    <p class="text-sm mt-2">Tech stack: HTML, CSS</p>
+                </div>
+                <a href="#" class="mt-4 inline-block text-blue-600 dark:text-blue-400 hover:underline">View GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
