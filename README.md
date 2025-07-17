@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌟 Mohit Kumar - Personal Portfolio
 
 This is my personal portfolio website built with **Python Flask (Backend)** and **HTML, CSS, TailwindCSS, JavaScript (Frontend)**.  
@@ -39,3 +40,6 @@ GitHub repository: [https://github.com/Dev-kartikbansal](https://github.com/Dev-
 ```bash
 git clone https://github.com/MohitKumar987/mohit-portfolio.git
 cd mohit-portfolio
+=======
+# Kartik_portfolio1
+>>>>>>> f3b82c2910e2507535c899d9bffac35b91e1e9c3
