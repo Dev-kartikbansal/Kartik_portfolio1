@@ -4,7 +4,7 @@ This is my personal portfolio website built with **Python Flask (Backend)** and 
 It showcases my projects, skills, achievements, education, and includes a contact form.  
 Live deployment: _[coming soon]_  
 
-GitHub repository: [https://github.com/MohitKumar987](https://github.com/MohitKumar987)
+GitHub repository: [https://github.com/Dev-kartikbansal](https://github.com/Dev-kartikbansal)
 
 ---
 

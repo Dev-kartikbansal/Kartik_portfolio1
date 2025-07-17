@@ -1,49 +1,203 @@
 {% extends 'base.html' %}
 
-{% block title %}About Me - Mohit Kumar{% endblock %}
+{% block title %}About Me - Kartik Bansal{% endblock %}
 
 {% block content %}
-<section class="py-12" data-aos="fade-up">
-    <h1 class="text-4xl font-bold text-center mb-6">About Me</h1>
-    <div class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-        <p>
-            Hello! I’m <strong>Mohit Kumar</strong>, a passionate developer and data enthusiast with hands-on experience in building responsive, interactive web applications and working on data-driven projects.
-        </p>
-        <p class="mt-4">
-            I enjoy solving problems, learning new technologies, and contributing to meaningful projects. My skillset includes languages like <strong>C++, Java, Python</strong> and frameworks like <strong>HTML, CSS, JavaScript</strong>.
-        </p>
+<!-- Hero Section -->
+<section class="relative py-20 bg-gradient-to-r from-blue-500 to-indigo-600 dark:from-gray-800 dark:to-gray-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/dimension.png');"></div>
+    <div class="container mx-auto px-6 relative z-10" data-aos="fade-down">
+        <div class="flex flex-col items-center text-center">
+            <div class="w-32 h-32 rounded-full border-4 border-white mb-6 overflow-hidden shadow-xl">
+                <!-- Replace with your profile image -->
+               <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Kartik Bansal" class="w-full h-full object-cover">
+            </div>
+            <h1 class="text-5xl font-bold mb-4">Kartik Bansal</h1>
+            <p class="text-xl opacity-90 max-w-2xl">Passionate Developer | Data Enthusiast | Problem Solver</p>
+            <div class="mt-8">
+                <a href="{{ url_for('static', filename='cv/Kartik Bansal CV.pdf') }}" download 
+                   class="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download My CV
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-white dark:bg-gray-900 transform skew-y-2 -mb-8"></div>
+</section>
 
-        <div class="mt-6">
-            <a href="{{ url_for('static', filename='cv/mohit_kumar_cv.pdf') }}" download class="inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
-                📄 Download My CV
-            </a>
+<!-- About Section -->
+<section class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 relative">
+                <span class="relative inline-block">
+                    About Me
+                    <span class="absolute bottom-0 left-0 right-0 h-1 bg-blue-500 transform translate-y-2"></span>
+                </span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-gray-700 dark:text-gray-300">
+                    <p class="text-lg leading-relaxed">
+                        Hello! I'm <span class="font-semibold text-blue-600 dark:text-blue-400">Kartik Bansal</span>, a passionate developer and data enthusiast with hands-on experience in building responsive, interactive web applications and working on data-driven projects.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        I enjoy solving problems, learning new technologies, and contributing to meaningful projects. My skillset includes languages like <span class="font-semibold">C++, Java, Python</span> and frameworks like <span class="font-semibold">HTML, CSS, JavaScript</span>.
+                    </p>
+                    <div class="pt-4">
+                        <h3 class="text-xl font-semibold mb-4">My Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">C++</span>
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">Python</span>
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">Java</span>
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">HTML/CSS</span>
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">JavaScript</span>
+                            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+                        <h3 class="text-xl font-bold mb-4">Quick Facts</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-blue-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                <span>Currently pursuing B.Tech in CSE at LPU</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-blue-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                <span>4-star SQL rating on HackerRank</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-blue-500 mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                                <span>Active member of Pradyut Foundation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="py-12 mt-8 bg-gray-100 dark:bg-gray-800" data-aos="fade-up" data-aos-delay="100">
-    <h2 class="text-3xl font-bold text-center mb-6">Education</h2>
-    <div class="max-w-4xl mx-auto space-y-4">
-        <div class="bg-white dark:bg-gray-700 shadow rounded p-4">
-            <h3 class="font-bold">Bachelor of Technology - Computer Science & Engineering</h3>
-            <p>Lovely Professional University, Punjab, India | CGPA: 7.98 | Since August 2022</p>
-        </div>
-        <div class="bg-white dark:bg-gray-700 shadow rounded p-4">
-            <h3 class="font-bold">Intermediate</h3>
-            <p>College of Commerce Arts and Science, Patna, Bihar | Percentage: 72% | Apr 2019 - Mar 2021</p>
-        </div>
-        <div class="bg-white dark:bg-gray-700 shadow rounded p-4">
-            <h3 class="font-bold">Matriculation</h3>
-            <p>Annie Beasant International School, Patna, Bihar | Percentage: 85.6% | Apr 2016 - Mar 2019</p>
+<!-- Education Section -->
+<section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-6" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 relative">
+                <span class="relative inline-block">
+                    Education
+                    <span class="absolute bottom-0 left-0 right-0 h-1 bg-blue-500 transform translate-y-2"></span>
+                </span>
+            </h2>
+            
+            <div class="space-y-8 relative">
+                <!-- Timeline line -->
+                <div class="absolute left-8 md:left-1/2 h-full w-0.5 bg-blue-200 dark:bg-blue-900 transform -translate-x-1/2"></div>
+                
+                <!-- Timeline item 1 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="flex-1 md:pr-12 md:text-right order-1 md:order-1">
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                            <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">Bachelor of Technology - Computer Science & Engineering</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Lovely Professional University, Punjab, India</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">CGPA: 7.1 | Since August 2022</p>
+                        </div>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center order-2 mx-6 md:mx-0 z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 md:pl-12 order-3 md:order-3 mt-4 md:mt-0"></div>
+                </div>
+                
+                <!-- Timeline item 2 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="flex-1 md:pr-12 order-1 md:order-3 mt-4 md:mt-0"></div>
+                    <div class="w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center order-2 mx-6 md:mx-0 z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 md:pl-12 md:text-left order-3 md:order-1">
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                            <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">Intermediate</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Dharam Public School</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Percentage: 74% | Apr 2021 - Mar 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Timeline item 3 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="flex-1 md:pr-12 md:text-right order-1 md:order-1">
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                            <h3 class="font-bold text-xl text-blue-600 dark:text-blue-400">Matriculation</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Dharam Public School</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Percentage: 86% | Apr 2019 - Mar 2020</p>
+                        </div>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center order-2 mx-6 md:mx-0 z-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 md:pl-12 order-3 md:order-3 mt-4 md:mt-0"></div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="py-12 mt-8" data-aos="fade-up" data-aos-delay="200">
-    <h2 class="text-3xl font-bold text-center mb-6">Achievements</h2>
-    <div class="flex flex-wrap justify-center gap-4 text-center">
-        <span class="px-4 py-2 bg-white dark:bg-gray-700 shadow rounded">⭐ 4-star rating in SQL (HackerRank)</span>
-        <span class="px-4 py-2 bg-white dark:bg-gray-700 shadow rounded">🏅 Solved 250+ LeetCode questions & earned badges</span>
+<!-- Achievements Section -->
+<section class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 relative">
+                <span class="relative inline-block">
+                    Achievements
+                    <span class="absolute bottom-0 left-0 right-0 h-1 bg-blue-500 transform translate-y-2"></span>
+                </span>
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-md border border-blue-100 dark:border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">HackerRank SQL</h3>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300">Achieved 4-star rating in SQL on HackerRank, demonstrating strong database querying skills.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-md border border-blue-100 dark:border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 dark:bg-blue-900 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold">Pradyut Foundation</h3>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300">Active member at event management domain in Pradyut Foundation, contributing to organizational events and activities.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
